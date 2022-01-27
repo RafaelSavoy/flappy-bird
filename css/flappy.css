@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans&family=Poppins&family=Press+Start+2P&family=Roboto:ital,wght@0,400;1,900&family=Ubuntu:wght@700&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root{
+	--font-press-start: 'Press Start 2P', cursive;
+}
+
+h1 {
+	color: rgb(255, 204, 0);
+	font-family: 'Press Start 2P', cursive;
+	font-weight: 500;
+	display: flex;
+	flex-direction: row;
+	margin: 15px;
+}
+
+[wm-flappy] {
+	position: relative;
+	background-color: deepskyblue;
+	height: 700px;
+	width: 1200px;
+	overflow: hidden;
+}
+
+.qualquerTecla {
+	color: rgb(9, 180, 186);
+	font-size: 20px;
+	font-family: 'Press Start 2P', cursive;
+	animation: piscar 2s infinite;
+	text-align: center;
+	margin: 15px;
+}
+
+.passaro {
+	position: absolute;
+	width: 60px;
+	left: calc(50% - 30px);
+}
+
+.par-de-barreiras{
+	position: absolute;
+	top: 0;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.barreira{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.barreira .borda{
+	height: 30px;
+	width: 130px;
+	background: linear-gradient(90deg,#639310,#A5E82E);
+	border: 2px solid black;
+}
+
+.barreira .corpo{
+	width: 110px;
+	background: linear-gradient(90deg,#639310,#A5E82E);
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+}
+
+.progresso{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-family: var(--font-press-start);
+	font-size: 40px;
+	z-index: 100;
+}
+
+
+@keyframes piscar {
+	0% {
+		opacity: 0.2;
+		
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0.2;
+	}
+}
